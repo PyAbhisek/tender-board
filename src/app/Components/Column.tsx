@@ -1,5 +1,7 @@
 import Card from "./Card"
+import Image from "next/image"
 
+import { Ellipsis } from 'lucide-react';
 const Column = () => {
     return (
         <div>
@@ -10,7 +12,7 @@ const Column = () => {
                     </div>
                     <div className="flex gap-[0.6rem]">
                         <p>+</p>
-                        <p>...</p>
+                        <button><Ellipsis  size={22} /></button>
                     </div>
                 </div>
                 <div className="body flex flex-col gap-[1rem] ">
