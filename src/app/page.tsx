@@ -1,10 +1,11 @@
-import Image from "next/image";
-import Card from "./Components/Card";
+
+import Column from "./Components/Column";
 
 export default function Home() {
   return (
     <div >
-      <Card />
+      <Column/> 
+
     </div>
   );
 }

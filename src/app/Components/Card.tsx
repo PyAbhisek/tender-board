@@ -1,7 +1,7 @@
 const Card = () => {
     return (
         <div>
-            <div className="border  w-[300px] rounded-[0.5rem] bg-[#1F2024] text-white p-[1rem]">
+            <div className="   rounded-[0.5rem] bg-[#1F2024] text-white p-[1rem]">
                 <div className="header flex items-center justify-between">
                     <div className="status  rounded-[5px] px-[0.5rem] border">
                         <div className=""><p> Pending</p></div>
