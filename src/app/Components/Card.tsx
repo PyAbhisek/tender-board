@@ -8,6 +8,7 @@ interface CardProps {
   task: {
     id: string;
     content: string;
+    description :string;
     status: string;
     assignee: string;
     date: string;
@@ -49,7 +50,7 @@ const Card = ({ task, bgColor, bgDotColor, index }: CardProps) => {
                 {task.content}
               </h5>
               <p className="text-[0.7rem] max-w-[80%] truncate mt-[0.2rem]">
-                Description goes here about the task
+                {task.description}
               </p>
             </div>
             <div className="assignee mt-[0.5rem] flex items-center justify-between">
