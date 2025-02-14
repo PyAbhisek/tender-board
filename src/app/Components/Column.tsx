@@ -8,13 +8,13 @@ interface Task {
   assignee: string;
   date: string;
   priority: string;
-  priorityColor:String;
+  priorityColor:string;
   comments: number;
   attachments: number;
 }
 
 interface ColumnProps {
-  column: { id: string; title: string; bgColor: String; bgDotColor:String; taskIds: string[] };
+  column: { id: string; title: string; bgColor: string; bgDotColor:string; taskIds: string[] };
   tasks: { [key: string]: Task };
 }
 
