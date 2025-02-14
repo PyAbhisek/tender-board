@@ -14,7 +14,7 @@ interface CardProps {
     date: string;
     priority: string;
     priorityColor: string;
-    comments: number;
+    comments: string[];
     attachments: number;
   };
   bgColor: string;
@@ -45,7 +45,7 @@ const Card = ({ task, bgColor, bgDotColor, index }: CardProps) => {
             </button>
           </div>
           <div className="body">
-            <div className="content mt-[0.6rem]">
+            <div className="content mt-[0.1rem]">
               <h5 className="text-[1rem] font-semibold max-w-[80%] truncate">
                 {task.content}
               </h5>
@@ -82,7 +82,7 @@ const Card = ({ task, bgColor, bgDotColor, index }: CardProps) => {
         <div className="footer border-t border-[#3B3C40]">
           <div className="text-[0.7rem] flex gap-[0.6rem] px-[1rem] py-[0.5rem]">
             <p className="flex items-center gap-[5px] leading-none">
-              <MessageSquare size={12} /> {task.comments} Comments
+              <MessageSquare size={12} /> {task.comments.length} Comments
             </p>
             <p className="flex items-center gap-[5px] leading-none">
               <Paperclip size={10} /> {task.attachments} Attachments
