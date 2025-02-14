@@ -5,19 +5,21 @@ import Placeholder from '../Assests/merge.png';
 import { MessageSquare, CalendarFold, Paperclip, Ellipsis } from 'lucide-react';
 
 interface CardProps {
-  task: { id: string; content: string; status: string; assignee: string; date: string; priority: string; comments: number; attachments: number };
+  task: { id: string; content: string; status: string; assignee: string; date: string; priority: string; priorityColor:String; comments: number; attachments: number };
+  bgColor :String;
+  bgDotColor:String;
   index: number;
 }
 
-const Card = ({ task, index }: CardProps) => {
+const Card = ({ task, bgColor,bgDotColor,index }: CardProps) => {
   return (
         <div>
           <div className="rounded-[0.5rem] bg-[#1F2024] text-white">
             <div className='px-[1rem] pt-[1rem] pb-[0.6rem]'>
               <div className="header flex items-center justify-between">
-                <div className="status rounded-[5px] px-[0.5rem] bg-[#193E54]">
+                <div className="status rounded-[5px] px-[0.5rem]" style={{ backgroundColor: `${bgColor}`}}>
                   <div className="flex items-center gap-[0.5rem]">
-                    <div className='h-[8px] rounded-full bg-[#1ea0ec] w-[8px]'></div>
+                    <div className='h-[8px] rounded-full  w-[8px]' style={{ backgroundColor: `${bgDotColor}`}}></div>
                     <p className="text-[0.7rem]">{task.status}</p>
                   </div>
                 </div>
@@ -35,7 +37,7 @@ const Card = ({ task, index }: CardProps) => {
                   </div>
                   <div className='flex flex-col items-end gap-[0.5rem]'>
                     <div className="img"><Image src={Placeholder} alt='Assignee' className='w-[1.2rem] h-auto' /></div>
-                    <div className="priority rounded-[5px] px-[0.7rem] bg-[#1D4D2D] text-[0.7rem]">{task.priority}</div>
+                    <div className="priority rounded-[5px] px-[0.7rem] text-[0.7rem]" style={{ backgroundColor: `${task.priorityColor}`}}>{task.priority}</div>
                   </div>
                 </div>
               </div>

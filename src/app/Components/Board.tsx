@@ -18,17 +18,17 @@ const Board = () => {
                 </div>
                 <div className="utility flex gap-[0.5rem]">
                     <input type="text" placeholder=" Search for tenders" className="w-[25rem] py-[.4rem] px-[1rem] rounded-md" />
-                    <button>  <Bell /></button>
-                    <div ><Image src={userIcon}  className="w-[2rem] h-auto"alt="placeholderIcon"/></div>
+                    <button>  <Bell /></button> 
+                    <div ><Image src={userIcon} className="w-[2rem] h-auto" alt="placeholderIcon" /></div>
                 </div>
             </div>
             <div className="flex gap-[2rem] overflow-x-scroll no-scrollbar w-[88%] mt-[2rem]">
-                
-            {data.columnOrder.map((columnId) => {
-                const column = data.columns[columnId as keyof typeof data.columns];
-                return <Column key={column.id} column={column} tasks={data.tasks} />;
-            })}
-              
+
+                {data.columnOrder.map((columnId) => {
+                    const column = data.columns[columnId as keyof typeof data.columns];
+                    return <Column key={column.id} column={column} tasks={data.tasks} />;
+                })}
+
             </div>
         </div>
     )
