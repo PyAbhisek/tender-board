@@ -61,9 +61,9 @@ const Column = ({ column, tasks }: ColumnProps) => {
       {/* Modal */}
       {isModalOpen && selectedTask && (
         <div className="fixed z-[1000] inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white text-black p-6 rounded-lg w-[50%]">
+          <div className="bg-[#1F2024] text-white p-6 rounded-lg w-[50%]">
             <h2 className="text-lg font-bold">{selectedTask.content}</h2>
-            <p className="text-sm text-gray-600">{selectedTask.description}</p>
+            <p className="text-sm text-white">{selectedTask.description}</p>
             <div className="mt-4">
               <p><strong>Status:</strong> {selectedTask.status}</p>
               <p><strong>Assignee:</strong> {selectedTask.assignee}</p>

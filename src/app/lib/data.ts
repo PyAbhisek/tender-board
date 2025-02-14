@@ -104,8 +104,8 @@ export const boardData = {
       status: "Review",
       assignee: "David Miller",
       date: "2025-02-19",
-      priority: "High",
-      priorityColor: "rgb(220, 53, 69)",
+      priority: "Medium",
+      priorityColor: "rgb(255, 153, 51)",
       comments: [
         "Have we analyzed comparable properties in the area?",
         "Are there any recent sales trends we should consider?",
