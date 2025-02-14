@@ -1,14 +1,19 @@
 export const boardData = {
     columns: {
-      "todo": {
-        id: "todo",
-        title: "To Do",
+      "pending": {
+        id: "pending",
+        title: "pending",
         taskIds: ["task-1", "task-2"],
       },
       "in-progress": {
         id: "in-progress",
         title: "In Progress",
         taskIds: ["task-3"],
+      },
+      "Review": {
+        id: "Review",
+        title: "Review",
+        taskIds: ['task-4'],
       },
       "done": {
         id: "done",
@@ -46,9 +51,19 @@ export const boardData = {
         "priority": "Low", 
         "comments": 7, 
         "attachments": 3 
-      }
+      },
+      "task-4": { 
+        "id": "task-4", 
+        "content": "Set up Next.js project", 
+        "status": "In Progress", 
+        "assignee": "John Doe", 
+        "date": "2025-02-15", 
+        "priority": "High", 
+        "comments": 5, 
+        "attachments": 2 
+      },
     },
-    columnOrder: ["todo", "in-progress", "done"],
+    columnOrder: ["pending", "in-progress", "Review","done"],
   };
   
   

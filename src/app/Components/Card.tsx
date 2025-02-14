@@ -11,13 +11,7 @@ interface CardProps {
 
 const Card = ({ task, index }: CardProps) => {
   return (
-    <Draggable draggableId={task.id} index={index}>
-      {(provided:any) => (
-        <div 
-          ref={provided.innerRef} 
-          {...provided.draggableProps} 
-          {...provided.dragHandleProps}
-        >
+        <div>
           <div className="rounded-[0.5rem] bg-[#1F2024] text-white">
             <div className='px-[1rem] pt-[1rem] pb-[0.6rem]'>
               <div className="header flex items-center justify-between">
@@ -54,32 +48,11 @@ const Card = ({ task, index }: CardProps) => {
             </div>
           </div>
         </div>
-      )}
-    </Draggable>
+      
+
   );
 };
 
 export default Card;
 
 
-
-// const Card: React.FC<CardProps> = ({ task, index }) => {
-//   return (
-//     <Draggable draggableId={task.id} index={index}>
-//       {(provided:any, snapshot:any) => (
-//         <div
-//           ref={provided.innerRef}
-//           {...provided.draggableProps}
-//           {...provided.dragHandleProps}
-//           className={`bg-white p-3 rounded shadow mb-2 transition ${
-//             snapshot.isDragging ? "bg-gray-200" : ""
-//           }`}
-//         >
-//           {task.content}
-//         </div>
-//       )}
-//     </Draggable>
-//   );
-// };
-
-// export default Card;
