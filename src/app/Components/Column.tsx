@@ -3,8 +3,7 @@ import Card from "./Card"
 const Column = () => {
     return (
         <div>
-            Column
-            <div className="h-[70rem] w-[20rem] border px-[1rem] bg-black text-white">
+            <div className="h-[40rem] w-[20rem] rounded-[0.5rem] px-[1rem] bg-black text-white">
                 <div className="header flex items-center justify-between">
                     <div className="">
                         Pending
@@ -14,9 +13,12 @@ const Column = () => {
                         <p>...</p>
                     </div>
                 </div>
-                <div className="body flex flex-col gap-[1rem]">
+                <div className="body flex flex-col gap-[1rem] ">
                     <Card />
                     <Card />
+                    <Card />
+                    
+
 
                 </div>
 

@@ -1,10 +1,11 @@
 
-import Column from "./Components/Column";
+import Board from "./Components/Board";
+
 
 export default function Home() {
   return (
     <div >
-      <Column/> 
+      <Board/>
 
     </div>
   );
