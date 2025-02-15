@@ -65,14 +65,22 @@ const Column = ({ column, tasks }: ColumnProps) => {
             <h2 className="text-lg font-bold">{selectedTask.content}</h2>
             <p className="text-sm text-white">{selectedTask.description}</p>
             <div className="mt-4">
-              <p><strong>Status:</strong> {selectedTask.status}</p>
+              <p className="flex items-center  gap-[10px]"><strong>Status:</strong>
+                <div
+                  className="status px-[0.5rem] py-[0.2rem] rounded-[5px]"
+                  style={{ backgroundColor: `${column.bgColor}` }}
+                >
+                  <div className="flex items-center gap-[0.5rem]">
+                    <p className="text-[0.9rem]">{selectedTask.status}</p>
+                  </div>
+                </div></p>
               <p><strong>Assignee:</strong> {selectedTask.assignee}</p>
               <p><strong>Date:</strong> {selectedTask.date}</p>
               <p><strong>Priority:</strong> <span className="px-[0.5rem] py-[0.2rem] rounded-sm text-white" style={{ background: selectedTask.priorityColor }}>{selectedTask.priority}</span></p>
-              <p><strong>Comments:</strong> {selectedTask.comments.map((comment:string)=>{
-                return  (
+              <p><strong>Comments:</strong> {selectedTask.comments.map((comment: string) => {
+                return (
                   <div>
-                      <p>{comment}</p>
+                    <p>{comment}</p>
                   </div>
                 )
               })}</p>
