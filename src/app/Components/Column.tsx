@@ -38,9 +38,9 @@ const Column = ({ column, tasks }: ColumnProps) => {
     <div>
       <div className="h-[80vh] w-80 relative bg-black text-white">
         <div className="header sticky top-0 bg-black p-4 flex items-center justify-between border-b border-gray-800">
-          <div className="flex gap-2 items-center">
-            <div className="h-[1rem] w-[1rem] rounded-full" style={{ backgroundColor: column.bgDotColor }}></div>
-            {column.id}
+          <div className="flex gap-2 items-center font-bold text-[1.2rem]">
+            <div className="h-[1rem] w-[1rem] rounded-full " style={{ backgroundColor: column.bgDotColor }}></div>
+            {column.id} <span className=" h-[1.5rem] w-[1.5rem] p-[5px] rounded flex justify-center items-center" style={{ backgroundColor: column.bgColor }}>{column.taskIds.length}</span>
           </div>
           <div className="flex gap-2">
             <p>+</p>
